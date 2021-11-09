@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --not-so-bright-blue: hsl(245, 83%, 68%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-color: var(--pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  max-height: 95vh;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+header img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.content__title {
+  /* margin-bottom: 1rem; */
+  font-weight: 900;
+}
+
+.content__description {
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+  text-align: center;
+  line-height: 1.5;
+  /* margin-bottom: 2rem; */
+}
+
+.content__plan {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--very-pale-blue);
+}
+
+.plan {
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.plan__title {
+  font-weight: 700;
+}
+
+.plan__price {
+  color: var(--desaturated-blue);
+}
+
+.content__plan a {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+.content__plan a:hover {
+  text-decoration: none;
+  color: var(--not-so-bright-blue);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Red Hat Display', sans-serif;
+  cursor: pointer;
+}
+
+.content__button-procced {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  /* box-shadow: 0px 5px 0px 0px var(--bright-blue); */
+}
+.content__button-procced:hover {
+  background: var(--not-so-bright-blue);
+}
+
+.content__button-cancel {
+  background: transparent;
+  color: var(--desaturated-blue);
+}
+
+.content__button-cancel:hover {
+  color: var(--dark-blue);
+}
+
+.attribution {
+  margin: 1rem 0;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--bright-blue);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('./images/pattern-background-desktop.svg');
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .content__plan {
+    padding: 1rem 2rem;
+  }
+}
